@@ -508,13 +508,13 @@
   &:active,
   &.active:not(.toggle-on):not(.toggle-off) {
     color: $color;
-    background-color: lighten($background, 8%);
-        border-color: lighten($border, 12%);
+    background-color: lighten($background, 6%);
+        border-color: lighten($border, 6%);
   }
   .open & { &.dropdown-toggle {
     color: $color;
-    background-color: lighten($background, 8%);
-        border-color: lighten($border, 12%);
+    background-color: lighten($background, 6%);
+        border-color: lighten($border, 6%);
   } }
   &:active,
   &.active {
@@ -563,13 +563,15 @@
     &:first-child {
       > a,
       > span {
-        @include border-left-radius($border-radius);
+        border-top-left-radius: $border-radius;
+        border-bottom-left-radius: $border-radius;
       }
     }
     &:last-child {
       > a,
       > span {
-        @include border-right-radius($border-radius);
+        border-top-right-radius: $border-radius;
+        border-bottom-right-radius: $border-radius;
       }
     }
   }
@@ -585,6 +587,12 @@
       background-color: darken($color, 10%);
     }
   }
+}
+
+// Badges
+// -------------------------
+@mixin badge-variant($color) {
+  background-color: $color;
 }
 
 // Contextual backgrounds

@@ -13,8 +13,8 @@
   // Define globals exposed by Node.js.
   "node": true,
 
-  // Allow ES6.
-  "esversion": 6,
+  // Allow ES8.
+  "esversion": 9,
 
   /*
    * ENFORCING OPTIONS
@@ -35,7 +35,7 @@
   "latedef": false,
 
   // Enforce line length to 100 characters
-  "maxlen": 200,
+  "maxlen": 220,
 
   // Require capitalized names for constructor functions.
   "newcap": true,

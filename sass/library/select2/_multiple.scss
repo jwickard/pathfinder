@@ -10,7 +10,8 @@
   -webkit-user-select: none;
 
   .select2-selection__rendered {
-    display: inline-block;
+    //display: inline-block;
+    display: block;
     overflow: hidden;
     padding-left: 8px;
     text-overflow: ellipsis;
@@ -26,6 +27,7 @@
     border: none;
     font-size: 100%;
     margin-top: 5px;
+    padding: 0;
 
     &::-webkit-search-cancel-button {
       -webkit-appearance: none;

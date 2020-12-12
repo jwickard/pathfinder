@@ -13,7 +13,7 @@
             </li>
             <li class="{{#openTabLog}}active{{/openTabLog}}">
                 <a role="tab" data-toggle="tab" data-name="infoLog" href="#{{dialogLogsContainerId}}">
-                    <i class="fas fa-user-clock fa-fw"></i>&nbsp;Log&nbsp;&nbsp;<small class="txt-color txt-color-warning"></small>
+                    <i class="fas fa-user-clock fa-fw"></i>&nbsp;Log
                 </a>
             </li>
         </ul>
@@ -49,7 +49,7 @@
         <div id="{{mapInfoSystemsId}}" class="pf-dynamic-area">
         </div>
 
-        <h4><i class="fas fa-link fa-lg fa-fw"></i> Connections</h4>
+        <h4><i class="fas fa-code-branch fa-rotate-270 fa-lg fa-fw"></i> Connections</h4>
 
         <div id="{{mapInfoConnectionsId}}" class="pf-dynamic-area"></div>
     </div>
@@ -72,22 +72,16 @@
 
         <div id="{{mapInfoLogsId}}" class="pf-dynamic-area"></div>
 
-        <div class="row">
-            <div class="col-xs-12">
-                <div class="well well-sm">
-                    <div class="row">
-                        <div class="col-xs-6 col-sm-2 col-md-2">Map config:</div>
-                        <div class="col-xs-6 col-sm-10 col-md-10 text-right">
-                            Save map changes to logfile&nbsp;
-                            {{#logHistoryEnabled}}
-                            <kbd class="txt-color txt-color-success">enabled</kbd>
-                            {{/logHistoryEnabled}}
-                            {{^logHistoryEnabled}}
-                            <kbd>disabled</kbd>
-                            {{/logHistoryEnabled}}
-                        </div>
-                    </div>
-                </div>
+        <div class="flex-row flex-between well well-sm">
+            <div class="flex-col">Map config:</div>
+            <div class="flex-col">
+                Save map changes to logfile&nbsp;
+                {{#logHistoryEnabled}}
+                <kbd class="txt-color txt-color-success">enabled</kbd>
+                {{/logHistoryEnabled}}
+                {{^logHistoryEnabled}}
+                <kbd>disabled</kbd>
+                {{/logHistoryEnabled}}
             </div>
         </div>
     </div>

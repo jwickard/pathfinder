@@ -166,30 +166,31 @@ $table-border-color:            $gray-dark;
 //## For each of Bootstrap's buttons, define text, background and border color.
 
 $btn-font-weight:                normal;
+$btn-border-radius-base:         2px;
 
 $btn-default-color:              $gray-lightest;
 $btn-default-bg:                 $gray-light;
-$btn-default-border:             darken($gray-light, 5%);
+$btn-default-border:             lighten($gray-light, 2%);
 
 $btn-primary-color:              $gray-lightest;
 $btn-primary-bg:                 $brand-primary;
-$btn-primary-border:             darken($btn-primary-bg, 5%);
+$btn-primary-border:             lighten($btn-primary-bg, 2%);
 
 $btn-success-color:              $gray-lightest;
 $btn-success-bg:                 $brand-success;
-$btn-success-border:             darken($btn-success-bg, 5%);
+$btn-success-border:             lighten($btn-success-bg, 2%);
 
 $btn-info-color:                 $gray-lightest;
 $btn-info-bg:                    $brand-info;
-$btn-info-border:                darken($btn-info-bg, 5%);
+$btn-info-border:                lighten($btn-info-bg, 2%);
 
 $btn-warning-color:              $gray-lightest;
 $btn-warning-bg:                 $orange-dark;
-$btn-warning-border:             darken($btn-warning-bg, 5%);
+$btn-warning-border:             lighten($btn-warning-bg, 2%);
 
 $btn-danger-color:               $gray-lightest;
 $btn-danger-bg:                  $brand-danger;
-$btn-danger-border:              darken($btn-danger-bg, 5%);
+$btn-danger-border:              lighten($btn-danger-bg, 2%);
 
 $btn-link-disabled-color:        $gray-light;
 
@@ -546,7 +547,7 @@ $modal-title-padding:         14px;
 $modal-title-line-height:     $line-height-base;
 
 $modal-content-bg:                             $gray;
-$modal-content-border-color:                   rgba(0,0,0,.2);
+$modal-content-border-color:                   transparent;
 $modal-content-fallback-border-color:          #999;
 
 $modal-backdrop-bg:           #000;
@@ -688,6 +689,12 @@ $badge-font-weight:           bold;
 $badge-line-height:           1;
 $badge-border-radius:         10px;
 
+$badge-default-bg:            $gray-light;
+$badge-primary-bg:            $brand-primary;
+$badge-success-bg:            $brand-success;
+$badge-info-bg:               $brand-info;
+$badge-warning-bg:            $brand-warning;
+$badge-danger-bg:             $brand-danger;
 
 //== Breadcrumbs
 //
@@ -723,7 +730,7 @@ $carousel-caption-color:                      #fff;
 //##
 
 $close-font-weight:           bold;
-$close-color:                 $red-darker;
+$close-color:                 $red-dark;
 $close-text-shadow:           0 1px 0 #fff;
 
 
@@ -737,8 +744,8 @@ $code-bg:                     $gray-light;
 $kbd-color:                   $gray-lighter;
 $kbd-bg:                      $gray-darker;
 
-$pre-bg:                      $gray-light;
-$pre-color:                   $gray-darkest;
+$pre-bg:                      $gray-dark;
+$pre-color:                   $gray-light;
 $pre-border-color:            #ccc;
 $pre-scrollable-max-height:   340px;
 
@@ -751,8 +758,8 @@ $text-muted:                  $gray-light;
 $abbr-border-color:           $gray-light;
 $headings-small-color:        $gray-light;
 $blockquote-small-color:      $gray-light;
-$blockquote-font-size:        ($font-size-base * 1.25);
-$blockquote-border-color:     $green;
+$blockquote-font-size:        ($font-size-base * 1.20);
+$blockquote-border-color:     $brand-info;
 $page-header-border-color:    $gray-lighter;
 
 
@@ -814,7 +821,6 @@ $base-url: "../../img";
 $html-background-image: "";
 $html-background-color: $bg-color;
 
-$body-background-image: "pf-bg.jpg";
 $body-background-color: $bg-color;
 
 //== HEADER

@@ -4,7 +4,7 @@
     font-family: $font-family-sans-serif;
     letter-spacing: 0;
     font-size: $font-size-h5;
-    margin: 20px 0;
+    margin: 20px 0 10px 0;
     line-height: normal;
   }
 
@@ -86,6 +86,16 @@
     }
   }
 
+  // checkbox list ============================================================
+  @media (min-width: $screen-sm-min) {
+    .fa-tree-child + .checkbox{
+      margin-left: 5px;
+      display: inline-block;
+      float: none;
+      width: unset;
+    }
+  }
+
   // form wizard ==============================================================
   .pf-wizard-navigation{
     margin: 0;
@@ -106,15 +116,15 @@
 
       &.finished{
           &:before{
-          @include border-image( linear-gradient(to right, $teal-dark, $teal-dark) 1 1% );
-          border-bottom: 0;
+            border-image: linear-gradient(to right, $teal-dark, $teal-dark) 1 1%;
+            border-bottom: 0;
         }
       }
 
       &.active{
 
         &:before{
-          @include border-image( linear-gradient(to right, $brand-success, $gray-light) 1 1% );
+          border-image: linear-gradient(to right, $brand-success, $gray-light) 1 1%;
           border-bottom: 0;
         }
       }
@@ -142,6 +152,12 @@
     }
   }
 }
+// notification dialog ========================================================
+#pf-notification-dialog{
+  h1{
+    will-change: transform;
+  }
+}
 
 // settings dialog ============================================================
 #pf-settings-dialog{
@@ -154,6 +170,7 @@
   #pf-dialog-captcha-wrapper{
     margin: 0;
     padding: 3px 0;
+    min-height: 35px; // captcha img has dynamic height. Height should not change on captcha reload
   }
 }
 
@@ -189,9 +206,24 @@
   position: relative;
   height: 700px;
   overflow: auto;
+
+  .list-unstyled.well{
+    display: inline-block;
+  }
+
+  h2:first-of-type{
+    margin-top: 0;
+  }
 }
 
-// ad system dialog ===========================================================
+// add system dialog ==========================================================
+#pf-system-dialog{
+  .form-control-static.pf-dynamic-area{
+    padding: 7px;
+    min-height: 32px;
+  }
+}
+
 .pf-system-dialog-select{
   width: 300px !important;
 }
@@ -200,6 +232,12 @@
 #pf-task-dialog{
   .pf-task-dialog-status{
     min-height: inherit;
+  }
+
+  h4>small.pull-right{
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    margin-top: -5px;
   }
 }
 
@@ -229,6 +267,44 @@
   }
 }
 
+// signature reader dialog ====================================================
+.pf-sig-reader-dialog{
+  h4 {
+    margin-top: 8px;
+
+    .pf-system-progress-scanned{
+      display: inline-block;
+      margin-left: 20px;
+      width: calc(100% - 255px);
+
+      .progress{
+        margin-bottom: 2px;
+      }
+    }
+
+    .progress-label-right{
+      margin-left: 8px;
+      vertical-align: middle;
+      font-size: 11px;
+      opacity: 0.65;
+    }
+  }
+
+  #pf-sig-info{
+    margin-bottom: 10px;
+  }
+
+  .pf-sig-table-info{
+    tbody{
+      pointer-events: none; // disables "hover" effect for rows/cells
+    }
+    // disabled xEditable table cells should have the "enabled" color
+    .editable-click.editable-disabled{
+      color: inherit;
+    }
+  }
+}
+
 // jump info dialog ===========================================================
 .pf-jump-info-dialog{
   blockquote{
@@ -254,17 +330,22 @@
 .pf-credits-dialog{
   .pf-credits-logo-background{
     overflow: visible;
-    background: url("#{$base-url}/logo_bg.png");
-    background-size: cover;
-    padding: 20px;
+    background: var(--bg-image);
+    background-position-y: -50px; // nicer image viewport
+    padding: 15px;
     margin-bottom: 20px;
-  }
 
-  #pf-logo-container{
-    width: 355px;
-    height: 366px;
-    margin: 0 auto;
+    > svg {
+      height: 80px;
+      width: 90px;
+    }
 
+    > h3 {
+      position: absolute;
+      top: 5px;
+      right: 15px;
+      margin: 0;
+    }
   }
 
   .pf-dynamic-area{
